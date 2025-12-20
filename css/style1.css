@@ -102,3 +102,277 @@ button:hover {
 #pink:hover{
   opacity: 0;
 }
+#stylized{
+  width:250px;
+  position: absolute;
+  left: 970px;
+  
+  transition: opacity 0.4s;
+}
+#stylized1{
+  width:250px;
+  left: 970px;
+  position: absolute;
+}
+#stylized:hover{
+  opacity: 0;
+}
+.p{
+  position: relative;
+  margin-left: 8%;
+ }
+.first-text {
+  position: absolute;
+  top: 280px;
+  left: 20px;
+  font-size: 30px;
+  color: #7d5a57;
+}
+
+.second-text {
+  position: absolute;
+  bottom: 450px;
+  left: 20px;
+  font-size: 18px;
+  color: #7d5a57;
+}
+.p h2{
+  padding-right: 10%;
+  color: #a406068b;
+}
+h2{
+  text-align: center;
+  color: #a406068b;
+}
+.products {
+  text-align: justify;
+  width: 240px;
+  margin-left: 10%;
+}
+
+.products img {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+span{
+  position: relative;
+}
+.footer{
+  margin-top: 7%;
+  position: relative;
+  width: 100%;
+  /* background: url(images/footeri2.jpg); */
+  background-color: #ffede5;
+  
+}
+body{
+  font-family: Georgia, serif;
+  background-color: #0808080a;
+}
+
+.containerr{
+  display: flex;
+  padding: 3rem;
+}
+
+.containerr .section{
+  flex-basis: 50%;
+  padding: 0 20px;
+}
+
+.section h2{
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.section .content{
+  margin:20px 0 0 0;
+  position: relative;
+}
+
+.section .content::before{
+  position: absolute;
+  content: '';
+  top: -10px;
+  height: 2px;
+  width: 100%;
+}
+
+
+.left .content .social{
+  margin: 20px 0 0 0;
+}
+
+.content p{
+  text-align: justify;
+}
+
+.center .content .fas{
+  font-size: 1.1rem;
+  background: transparent;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50px;
+  transition: 0.3s;
+  cursor: pointer;
+  border:1px solid #dab5b5;
+}
+
+.center .content .fas:hover{
+  background: #e6c0ae;
+  border:1px solid #f8dccf;
+}
+
+.center .content .text{
+  font-size: 1.0.6rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.center .content .phone{
+  margin: 15px 0;
+}
+
+.right form .text{
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: #656565;
+}
+
+.right form input{
+  width: 100%;
+  font-size: 1.0625rem;
+  background: transparent;
+  border: 1px solid #656565;
+}
+
+.right form input{
+  height: 35px;
+}
+
+.right form .btn{
+  margin-top: 40px;
+}
+
+.right form .btn button{
+  height: 40px;
+  width: 100%;
+  border:none;
+  outline: none;
+  background: #e6c0ae;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.right form .btn button:hover{
+  background: #000;
+  color:white;
+}
+
+.footer-bottom center{
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #e6c0ae;
+}
+
+
+
+.footer-bottom center a{
+  text-decoration: none;
+  color:black;
+}
+
+.footer-bottom center a:hover{
+  text-decoration: underline;
+}
+
+@media screen and (max-width:700px){
+  footer{
+      position: relative;
+      bottom: 0px;
+      margin-top: 80%;
+  }
+
+  .left .content{
+      padding-right:0px;
+      padding-bottom: 30px;
+      text-align: justify;
+  }
+
+  .containerr{
+      flex-wrap: wrap;
+      flex-direction: column;
+      padding:0.5rem;
+  }
+
+  .containerr .section{
+      margin:5px 0;
+  }
+}
+.email{
+  width: 40%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  align-items: center;
+}
+.textt{
+  text-align: left;
+}
+h3{
+  font-size: larger;
+  text-align: center;
+  color: #a406068b;
+}
+.about{
+  margin-right:10%;
+  margin-left: 6%
+}
+center{
+  margin-top: 4%;
+}
+h1 {
+ color: #4a3533;
+}
+.texttt{
+  margin-left: 36%;
+  ;
+}
+.palette{
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+#hh{
+  margin-left: 38%;
+  margin-top: 7%;
+}
+
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+.vh-100 {
+  text-align: center;
+  position: inherit;
+}
