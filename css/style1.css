@@ -32,9 +32,9 @@
   font-size: large;
   text-decoration: none;
   }
-   .nav_links ul li a:hover{
+  /* .nav_links ul li a:hover{
   color: #0088a9;
-  }
+  } */
 
   .nav_links ul li :hover::after{
   width: 100%;
