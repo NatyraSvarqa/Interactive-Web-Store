@@ -1,14 +1,27 @@
 <?php
 include 'db.php';
 
-$email = $_POST['email'];
-$newpass = password_hash("123456", PASSWORD_DEFAULT);
+if(isset($_POST['email']) && isset($_POST['password'])) {
+    $email = $_POST['email'];
+    $newpass = $_POST['password'];
 
-$sql = "UPDATE users SET password='$newpass' WHERE email='$email'";
+    $hashed_pass = password_hash($newpass, PASSWORD_DEFAULT);
 
-if(mysqli_query($conn, $sql)){
-    echo "Password reset successful. New password: 123456";
-}else{
-    echo "Email not found";
+    $stmt = $conn->prepare("UPDATE users SET password=? WHERE email=?");
+    $stmt->bind_param("ss", $hashed_pass, $email);
+
+    if($stmt->execute()) {
+        if($stmt->affected_rows > 0){
+            echo "Password reset successful.";
+        } else {
+            echo "Email not found.";
+        }
+    } else {
+        echo "Error occurred.";
+    }
+
+    $stmt->close();
+    $conn->close();
+} else {
+    echo "Please fill in both email and new password.";
 }
-?>

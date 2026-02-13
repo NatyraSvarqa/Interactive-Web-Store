@@ -11,7 +11,8 @@ $user = mysqli_fetch_assoc($result);
 
 if($user && password_verify($password, $user['password'])){
     $_SESSION['user'] = $user['email'];
-    header("Location: index.html");
+    header("Location: ../index.html");
+    exit();
 }else{
     echo "Wrong email or password";
 }

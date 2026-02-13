@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db   = "student_project";
+$db   = "interactive_web_store";
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 
