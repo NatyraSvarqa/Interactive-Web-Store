@@ -25,16 +25,6 @@ if(isset($_POST['email']) && isset($_POST['password'])) {
 
     if($stmt->execute()) {
         if($stmt->affected_rows > 0){
-
-            $ip = $_SERVER['REMOTE_ADDR'];
-            $date = date("Y-m-d H:i:s");
-
-            $log = $conn->prepare("INSERT INTO password_logs (email, ip_address, reset_time) VALUES (?, ?, ?)");
-            if($log){
-                $log->bind_param("sss", $email, $ip, $date);
-                $log->execute();
-                $log->close();
-             }
             
             echo "Password reset successful.";
         } else {
