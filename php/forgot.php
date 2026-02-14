@@ -3,7 +3,7 @@ include 'db.php';
 
 if(isset($_POST['email']) && isset($_POST['password'])) {
     $email = $_POST['email'];
-    $newpass = $_POST['password']; }
+    $newpass = $_POST['password']; 
 
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
         echo "Invalid email format.";
@@ -34,6 +34,7 @@ if(isset($_POST['email']) && isset($_POST['password'])) {
                 $log->bind_param("sss", $email, $ip, $date);
                 $log->execute();
                 $log->close();
+             }
             
             echo "Password reset successful.";
         } else {
@@ -48,3 +49,4 @@ if(isset($_POST['email']) && isset($_POST['password'])) {
 } else {
     echo "Please fill in both email and new password.";
 }
+?>
